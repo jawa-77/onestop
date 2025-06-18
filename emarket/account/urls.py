@@ -1,17 +1,16 @@
 from django.urls import path
 from . import views
 
-urlpatterns = [
+urlpatterns =[
     path('register/',views.register,name='register'),
     path('userinfo/',views.current_user,name='user_info'),
     path('userinfo/update/',views.update_user,name='update_user'),
+    path('forgot_password/', views.forgot_password,name='forgot_password'),
+    path('reset_password/<str:token>', views.reset_password,name='reset_password')
 ]
 
+#from django.urls import path
+#from .views import current_user, update_user
 
-from django.urls import path
-from .views import current_user, update_user
-
-urlpatterns = [
-    path('userinfo/', current_user, name='user-info'),
-    path('userinfo/update/', update_user, name='user-update'),
-]
+#urlpatterns = [
+  ## path('userinfo/update/', update_user, name='user-update'),]

@@ -29,7 +29,7 @@ urlpatterns = [
     path('api/products/', include('product.urls')),
     path('api/accounts/', include('account.urls')),
     path('api/token/',TokenObtainPairView.as_view()),
-    
+    path('api/', include('order.urls')),
    
 ] 
 

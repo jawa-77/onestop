@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_simplejwt',
     'account.apps.AccountConfig',
+    'order.apps.OrderConfig',
     
    
    
@@ -58,6 +59,16 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+# Looking to send emails in production? Check out our Email API/SMTP product!
+EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
+EMAIL_HOST_USER = '1a72e6939867fb'
+EMAIL_HOST_PASSWORD = '8560650759fd6e' 
+EMAIL_PORT = '2525'
+#EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_USE_TLS:False
+EMAIL_USE_SSL:False 
 
 ROOT_URLCONF = 'emarket.urls'
 MEDIA_URL = '/media/'
