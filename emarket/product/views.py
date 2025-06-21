@@ -19,7 +19,7 @@ def get_all_products(request):
     
     filterset= ProductsFilter(request.GET,queryset=Product.objects.all().order_by('id'))
     count= filterset.qs.count()
-    respage= 4
+    respage= 14
     paginator= PageNumberPagination() 
     paginator.page_size = respage
     

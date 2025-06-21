@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-q7^v+4zp5%hz02pr&dbdmme@tn$p4i%3k54_6sy(f#jx1j!u*v'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['jawa21.pythonanywhere.com']
 
 
 # Application definition
@@ -96,21 +96,23 @@ WSGI_APPLICATION = 'emarket.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
- #DATABASES = {
-  #  'default': {
-   #     'ENGINE': 'django.db.backends.postgresql',
-     #   'NAME': 'postgres',
-    #    'USER':'postgres.dnvlagrjyagwzyqgbgcd',
-      #  'PASSWORD':"AAZZxxss3344@",  
-       # 'HOST':"aws-0-eu-north-1.pooler.supabase.com",
-        #'PORT':  '6543', 
+DATABASES = {
+     'default': {
+         'ENGINE': 'django.db.backends.postgresql',
+         'NAME': 'postgres',
+         'USER':'postgres.dnvlagrjyagwzyqgbgcd',
+         'PASSWORD':"AAZZxxss3344@",  
+         'HOST':"aws-0-eu-north-1.pooler.supabase.com",
+         'PORT':  '6543', 
+     }
+ }
         
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',}  
-      } 
+  #DATABASES = {
+    #'default': {
+        #'ENGINE': 'django.db.backends.sqlite3',
+       # 'NAME': BASE_DIR / 'db.sqlite3',}  
+      #} 
 
 
 REST_FRAMEWORK = {
