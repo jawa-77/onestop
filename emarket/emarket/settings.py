@@ -96,21 +96,21 @@ WSGI_APPLICATION = 'emarket.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-#DATABASES = {
-     #'default': {
-         #  'NAME': 'postgres',
-      #   'USER':'postgres.dnvlagrjyagwzyqgbgcd',
-     #    'PASSWORD':"AAZZxxss3344@",  
-    #     'HOST':"aws-0-eu-north-1.pooler.supabase.com",
-   #      'PORT':  '6543', 
-  #   }
- #}
-        
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',}  
-      } 
+        'NAME': 'postgres',
+        'USER':'postgres.dnvlagrjyagwzyqgbgcd',
+        'PASSWORD':"AAZZxxss3344@",  
+        'HOST':"aws-0-eu-north-1.pooler.supabase.com",
+        'PORT':  '5432', 
+     }
+ }
+        
+#DATABASES = {
+    #'default': {
+        #'ENGINE': 'django.db.backends.sqlite3',
+       # 'NAME': BASE_DIR / 'db.sqlite3',}  
+      #} 
 
 
 REST_FRAMEWORK = {
