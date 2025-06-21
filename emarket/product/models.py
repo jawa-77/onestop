@@ -39,7 +39,7 @@ class Product(models.Model):
   bottle_size= models.IntegerField(db_default=0)
   longevity=models.CharField( max_length=40,choices=longevity.choices,default='Moderate')
   sillage=models.CharField( max_length=40,choices=sillage.choices ,default='Moderate')
-  picture = models.ImageField(upload_to='products/', null=True, blank=True)
+  picture = models.TextField(max_length=1000, default="",blank=False)
 
 
   def __str__ (self):
